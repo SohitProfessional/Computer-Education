@@ -1,0 +1,192 @@
+/* =====================================
+   BODY SECTION
+   Yeh poori website ka base design hai
+===================================== */
+body{
+    font-family: Arial, sans-serif;   /* Default font family */
+    background: linear-gradient(to right, #d3d3d3, #f0f0f0); /* Light gradient background */
+    margin: 0;   /* Browser ka default margin remove */
+    padding: 0;  /* Default padding remove */
+}
+
+
+/* =====================================
+   HEADER SECTION
+   Top blue banner styling
+===================================== */
+header{
+    background:#004aad;   /* Blue background color */
+    color:white;          /* Text white */
+    padding:40px;         /* Andar space */
+    text-align:center;    /* Text center align */
+}
+
+
+/* =====================================
+   NAVIGATION BAR
+   Menu links styling
+===================================== */
+nav{
+    background: #111;     /* Dark background */
+    padding:15px;
+    text-align: center;   /* Links center me */
+}
+
+/* Navigation links */
+nav a{
+    color: white;              /* Link text white */
+    text-decoration: none;     /* Underline remove */
+    margin: 15px;              /* Links ke beech space */
+    font-weight: 600;          /* Thoda bold text */
+    padding: 8px 15px;         /* Clickable area increase */
+    transition: 0.3s ease;     /* Smooth hover effect */
+}
+
+/* Hover effect */
+nav a:hover{
+    background-color: #00c6ff; /* Hover background */
+    color: #000;               /* Hover text black */
+    border-radius: 5px;        /* Rounded corners */
+}
+
+
+/* =====================================
+   CLIPBOARD GROUP SECTION
+   Image + Text side by side layout
+===================================== */
+.Group-container {
+    display: flex;              /* Flexbox enable (left-right layout) */
+    align-items: center;        /* Vertical center alignment */
+    justify-content: center;    /* Horizontal center */
+    padding: 25px;              /* Inner spacing */
+    border: 2px solid #2c3e75;  /* Border around section */
+    border-radius: 15px;        /* Rounded edges */
+    background: #d3d3d3;        /* Light grey background */
+    width: 90%;                 /* Container width */
+    margin: 25px auto;          /* Center align */
+}
+
+
+/* =====================================
+   LEFT SIDE IMAGE
+===================================== */
+.Group-Image img {
+    width: 600px;               /* Fixed width */
+    height: auto;               /* Maintain aspect ratio */
+    border: 2px solid #353b4d;  /* Image border */
+    border-radius: 10px;        /* Rounded image corners */
+}
+
+
+/* =====================================
+   VERTICAL DIVIDER LINE
+===================================== */
+.Group-Divider{
+    width: 4px;                 /* Line thickness */
+    height: 230px;              /* Line height */
+    background: #4a6bbd;        /* Blue color */
+    margin: 0 40px;             /* Space left & right */
+}
+
+
+/* =====================================
+   RIGHT SIDE CONTENT
+===================================== */
+.Group {
+    flex: 1;   /* Remaining space occupy karega */
+}
+
+/* Clipboard heading */
+.Group h2 {
+    color: #4a6bbd;       /* Heading color */
+    font-size: 32px;      /* Font size */
+    margin-bottom: 20px;  /* Space below heading */
+}
+
+/* List styling */
+.Group ul {
+    font-size: 20px;      /* List text size */
+    padding-left: 20px;   /* Bullet spacing */
+}
+
+.Group li {
+    margin-bottom: 12px;  /* List items ke beech gap */
+}
+
+
+/* =====================================
+   MAIN CONTENT CARDS
+   (Cut, Copy, Paste sections)
+===================================== */
+.container{
+    width: 85%;                      /* Container width */
+    margin: 20px auto;               /* Center align */
+    padding: 25px;                   /* Inner spacing */
+    border-radius: 15px;             /* Rounded corners */
+    background: linear-gradient(135deg, #ffffff, #e6f0ff); /* Soft gradient */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    transition: 0.3s ease;           /* Smooth animation */
+}
+
+/* Hover animation */
+.container:hover{
+    transform: translateY(-8px);  /* Thoda upar move */
+    background: linear-gradient(135deg, #ffecd2, #fcb69f); /* Color change */
+}
+
+/* Section headings */
+h3{
+    margin-top: 0;
+    color: #004aad;
+}
+
+/* Paragraph styling */
+p{
+    text-align: justify;  /* Text justified */
+    line-height: 1.7;     /* Line spacing */
+    margin-left: 15px;
+}
+
+
+/* =====================================
+   FOOTER SECTION
+===================================== */
+footer{
+    background:#111;     /* Dark background */
+    color:white;         /* White text */
+    text-align:center;
+    padding:15px;
+    margin-top: 30px;
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN (Mobile View)
+   Screen width 768px se chhoti ho to
+===================================== */
+@media (max-width: 768px) {
+
+    /* Layout vertical ho jayega */
+    .Group-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Divider horizontal line ban jayega */
+    .Group-Divider {
+        width: 80%;
+        height: 4px;
+        margin: 20px 0;
+    }
+
+    /* List bullets center me */
+    .Group ul {
+        padding-left: 0;
+        list-style-position: inside;
+    }
+
+    /* Container width mobile me full */
+    .container{
+        width: 95%;
+    }
+}
